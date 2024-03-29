@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import SingleSong from "./SingleSong";
 
 const AlbumDetails = () => {
   const [albumData, setAlbumData] = useState(null);
@@ -41,18 +42,23 @@ const AlbumDetails = () => {
         <Col xs={12} className="text-center text-light">
           {albumData ? (
             <>
-              <img src={albumData.cover_medium} alt={albumData.title} />
-              <h1>{albumData.title}</h1>
-              <h2>{albumData.artist.name}</h2>
-              <p>Label: {albumData.label}</p>
-              <p>Number of Tracks: {albumData.nb_tracks}</p>
-              <p>Release Date: {albumData.release_date}</p>
-              <p>Genre: {albumData.genre_id}</p>
-              <ul>
+              <Row>
+                <Col xs={12}>
+                  <img src={albumData.cover_big} alt={albumData.title} />
+                </Col>
+                <Col xs={12}>
+                  <h1>{albumData.title}</h1>
+                </Col>
+                <Col>
+                  <h3 className="fw-bold">{albumData.artist.name}</h3>
+                </Col>
+              </Row>
+
+              <Row className=" ps-5 text-start pt-5 mb-5">
                 {albumData.tracks.data.map((track) => (
-                  <li key={track.id}>{track.title}</li>
+                  <SingleSong key={track.id} track={track} />
                 ))}
-              </ul>
+              </Row>
             </>
           ) : (
             <div>Loading...</div>
