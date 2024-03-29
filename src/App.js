@@ -6,6 +6,7 @@ import MySideBar from "./Components/MySideBar";
 import { Col, Container, Row } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchResults from "./Components/SearchResults";
+import AlbumDetails from "./Components/AlbumDetails";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/:searched" element={<SearchResults />} />
+                  <Route path="/album/:id" element={<AlbumDetails />} />
                 </Routes>
               </Col>
             </Row>

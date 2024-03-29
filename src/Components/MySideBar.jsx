@@ -3,6 +3,7 @@ import { Button, Container, Row, Col, Form, ButtonGroup } from "react-bootstrap"
 import logo from "../assets/logo/logo.png";
 import SearchBar from "../Components/SearchBar";
 import { HouseDoorFill, BookFill } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 function MySideBar() {
   return (
@@ -12,10 +13,10 @@ function MySideBar() {
           <img src={logo} alt="Spotify Logo" width="131" height="40" />
         </Col>
         <Col xs={12} className="py-2">
-          <a href="#" className="text-decoration-none text-secondary">
+          <Link to="/" className="text-decoration-none text-secondary">
             <HouseDoorFill size={30} />
             &nbsp; Home
-          </a>
+          </Link>
         </Col>
         <Col xs={12} className="py-3">
           <a href="#" className="text-decoration-none text-secondary">
