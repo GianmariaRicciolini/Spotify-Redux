@@ -43,7 +43,7 @@ const AlbumDetails = () => {
           {albumData ? (
             <>
               <Row>
-                <Col xs={12}>
+                <Col xs={12} className="py-4">
                   <img src={albumData.cover_big} alt={albumData.title} />
                 </Col>
                 <Col xs={12}>
