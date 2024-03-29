@@ -31,8 +31,8 @@ const RowAlbum = ({ genre, artist }) => {
 
   return (
     <Container fluid>
-      <Row>
-        <h2>{genre}</h2>
+      <Row className="py-3">
+        <h2 className="text-light">{genre}</h2>
 
         {albums.slice(0, 4).map((album) => (
           <SingleAlbum key={album.id} albumInfo={album} />
