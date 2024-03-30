@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function MySideBar() {
   return (
     <Container className="bg-black vh-100 d-flex flex-column justify-content-between py-4">
-      <Row>
+      <Row className="px-4">
         <Col xs={12} className="pb-4">
           <img src={logo} alt="Spotify Logo" width="131" height="40" />
         </Col>
